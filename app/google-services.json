@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "256893301971",
+    "firebase_url": "https://bus-reservation-59811-default-rtdb.firebaseio.com",
+    "project_id": "bus-reservation-59811",
+    "storage_bucket": "bus-reservation-59811.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256893301971:android:4c05aa8110048bd3581026",
+        "android_client_info": {
+          "package_name": "com.example.bus_reservation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWuigz2WyjkNUzRdKIGdcCGXibMaBVAXI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
