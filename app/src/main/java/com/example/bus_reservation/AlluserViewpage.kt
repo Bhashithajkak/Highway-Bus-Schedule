@@ -49,7 +49,6 @@ class AlluserViewpage : AppCompatActivity() {
 
         val gotoLogginButton : Button = findViewById(R.id.goToLogin)
         gotoLogginButton.setOnClickListener {
-            // Handle the click event, you can navigate to a new activity here
             startActivity(Intent(this, LoginActivity::class.java))
         }
 
@@ -67,7 +66,39 @@ class AlluserViewpage : AppCompatActivity() {
         searchButton.setOnClickListener {
             searchList(startFrom, destination)
         }
+        val refreshButton : Button = findViewById(R.id.refreshButton)
+        refreshButton.setOnClickListener{
+            selectStartFrom.clearListSelection()
+            selectStartFrom.text.clear()
+            selectDestination.clearListSelection()
+            selectDestination.text.clear()
+            searchList(null,null)
+        }
 
+        retreiwAllData()
+
+    }
+
+    private fun searchList(start: String?, destination: String?) {
+        val searchList = ArrayList<DataClass>()
+        if(start!=null&&destination!=null) {
+            for (dataClass in dataList) {
+
+                val startMatch = dataClass.dataDesc.toLowerCase().contains(start.toLowerCase())
+                val destinationMatch = dataClass.dataLang.toLowerCase().contains(destination.toLowerCase())
+
+                if (startMatch && destinationMatch) {
+                    searchList.add(dataClass)
+                }
+            }
+
+
+        } else {
+            retreiwAllData()
+        }
+        adapter.searchDataList(searchList)
+    }
+    private fun retreiwAllData() {
         val gridLayoutManager = GridLayoutManager(this, 1)
         recyclerView.layoutManager = gridLayoutManager
 
@@ -101,34 +132,5 @@ class AlluserViewpage : AppCompatActivity() {
             override fun onCancelled(error: DatabaseError) {
                 dialog.dismiss()
             }
-        })
-
-
-    }
-
-    private fun searchList(start: String?, destination: String?) {
-        val searchList = ArrayList<DataClass>()
-        if(start!=null&&destination!=null) {
-            for (dataClass in dataList) {
-
-                val startMatch = dataClass.dataDesc.toLowerCase().contains(start.toLowerCase())
-                val destinationMatch = dataClass.dataLang.toLowerCase().contains(destination.toLowerCase())
-
-                if (startMatch || destinationMatch) {
-                    searchList.add(dataClass)
-                }
-            }
-
-
-        } else {
-            searchList.addAll(dataList)
-        }
-        adapter.searchDataList(searchList)
-    }
-
-
-    override fun onDestroy() {
-        super.onDestroy()
-        databaseReference.removeEventListener(eventListener)
-    }
+        })}
 }

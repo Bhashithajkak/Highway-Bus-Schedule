@@ -1,9 +1,5 @@
 package com.example.bus_reservation
 
-
-
-
-
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -32,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recyclerView)
         fab = findViewById(R.id.fab)
-        searchView = findViewById(R.id.search)  // Uncomment this line
+        searchView = findViewById(R.id.search)
 
 
         val gridLayoutManager = GridLayoutManager(this, 1)
@@ -76,7 +72,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                newText?.let { searchList(it, "") }  // Pass an empty string for descText
+                newText?.let { searchList(it, "") }
                 return true
             }
         })

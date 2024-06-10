@@ -85,15 +85,13 @@ class LoginActivity : AppCompatActivity() {
 
 
     private fun checkUserRole(email: String) {
-        // Implement logic to check if the user is an admin or a regular user based on email
-        // For simplicity, let's assume the user is an admin if the email is "Admin123@gmail.com"
+
         val isAdmin = email.equals("admin12345@gmail.com", ignoreCase = true)
 
         if (isAdmin) {
-            // Redirect to AdminMainActivity
             startActivity(Intent(this, AdminDashbord::class.java))
         } else {
-            // Redirect to UserMainActivity
+
             startActivity(Intent(this,UserBord::class.java))
         }
         finish()

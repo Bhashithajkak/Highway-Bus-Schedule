@@ -66,19 +66,17 @@ class DetailActivity : AppCompatActivity() {
             Glide.with(this).load(bundle.getStringExtra("Image")).into(detailImage)
             imageUrl = intent.getStringExtra("Image") ?: ""
 
-            // Check if the image URL is not null or empty before using it
             if (imageUrl.isNotEmpty()) {
                 // Load the image using Glide
                 Glide.with(this@DetailActivity).load(imageUrl).into(detailImage)
-                // Now you can use `storageRef` as needed
+
             } else {
                 Log.e("DeatilActivity", "ImageUrl empty")
-                // Handle the case where the image URL is null or empty
-                // You might want to show an error message or handle it in a way that makes sense for your app
+
             }
         }
 
-        // ...
+
 
         deleteButton.setOnClickListener {
             val reference: DatabaseReference =

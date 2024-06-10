@@ -8,9 +8,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="lavender">#8692f7</color>
+    <color name="lavender">#14dfad</color>
     <color name="red">#c70000</color>
-    <color name="green">#068251</color>
+    <color name="green">#14dfad</color>
     <color name="gray">#E0F6ED</color>
+    <color name="our">#14dfad</color>
 
 </resources>

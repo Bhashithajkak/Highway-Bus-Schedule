@@ -3,6 +3,7 @@ package com.example.bus_reservation
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.cardview.widget.CardView
 
 class AdminDashbord : AppCompatActivity() {
@@ -13,6 +14,10 @@ class AdminDashbord : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         // Remove the action bar
         supportActionBar?.hide()
+
+
+
+
 
         setContentView(R.layout.activity_admin)
 
@@ -26,7 +31,7 @@ class AdminDashbord : AppCompatActivity() {
         busdetails = findViewById(R.id.busdetails)
 
         busdetails.setOnClickListener {
-            val intent = Intent(this@AdminDashbord, MainActivity::class.java)
+            val intent = Intent(this@AdminDashbord, AllBookingData::class.java)
             startActivity(intent)
         }
     }

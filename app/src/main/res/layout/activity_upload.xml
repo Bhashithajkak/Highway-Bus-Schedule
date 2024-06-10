@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".UploadActivity">
+    tools:context=".UploadActivity"
+    >
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -20,111 +21,113 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_gravity="center_horizontal"
+            android:background="@drawable/lavender_border"
+            android:orientation="vertical"
             android:padding="20dp"
-            android:background="@drawable/lavender_border">
+            android:layout_marginBottom="30dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Upload Data"
-                android:textSize="30sp"
                 android:textAlignment="center"
-                android:textColor="@color/lavender"/>
+                android:textColor="@color/lavender"
+                android:textSize="30sp" />
 
             <ImageView
+                android:id="@+id/uploadImage"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:src="@drawable/add"
-                android:id="@+id/uploadImage"
                 android:layout_marginTop="10dp"
-                android:scaleType="fitXY"/>
+                android:scaleType="fitXY"
+                android:src="@drawable/add" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
                 android:id="@+id/uploadTopic"
-                android:background="@drawable/lavender_border"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:layout_marginTop="20dp"
-                android:padding="16dp"
+                android:background="@drawable/lavender_border"
+                android:gravity="start|center_vertical"
                 android:hint="Enter bus name"
-                android:gravity="start|center_vertical"
-                android:textColor="@color/lavender"/>
+                android:padding="16dp"
+                android:textColor="@color/lavender" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
                 android:id="@+id/uploadDesc"
-                android:background="@drawable/lavender_border"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:layout_marginTop="20dp"
-                android:padding="16dp"
+                android:background="@drawable/lavender_border"
+                android:gravity="start|center_vertical"
                 android:hint="Enter start place"
-                android:gravity="start|center_vertical"
-                android:textColor="@color/lavender"/>
+                android:padding="16dp"
+                android:textColor="@color/lavender" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
                 android:id="@+id/uploadLang"
-                android:background="@drawable/lavender_border"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:layout_marginTop="20dp"
-                android:padding="16dp"
+                android:background="@drawable/lavender_border"
+                android:gravity="start|center_vertical"
                 android:hint="Enter arrivale place"
-                android:gravity="start|center_vertical"
-                android:textColor="@color/lavender"/>
+                android:padding="16dp"
+                android:textColor="@color/lavender" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
                 android:id="@+id/uploadDescTime"
-                android:background="@drawable/lavender_border"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:layout_marginTop="20dp"
-                android:padding="16dp"
+                android:background="@drawable/lavender_border"
+                android:gravity="start|center_vertical"
                 android:hint="Enter start time"
-                android:gravity="start|center_vertical"
-                android:textColor="@color/lavender"/>
+                android:padding="16dp"
+                android:textColor="@color/lavender" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
                 android:id="@+id/uploadLangTime"
-                android:background="@drawable/lavender_border"
-                android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:hint="Enter arrivale time"
-                android:gravity="start|center_vertical"
-                android:textColor="@color/lavender"/>
-            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/uploadPrice"
-                android:background="@drawable/lavender_border"
                 android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:hint="Enter price"
+                android:background="@drawable/lavender_border"
                 android:gravity="start|center_vertical"
-                android:textColor="@color/lavender"/>
+                android:hint="Enter arrivale time"
+                android:padding="16dp"
+                android:textColor="@color/lavender" />
 
             <EditText
+                android:id="@+id/uploadPrice"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/uploadAvailability"
-                android:background="@drawable/lavender_border"
                 android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:hint="Enter seet availability"
+                android:background="@drawable/lavender_border"
                 android:gravity="start|center_vertical"
-                android:textColor="@color/lavender"/>
+                android:hint="Enter price"
+                android:padding="16dp"
+                android:textColor="@color/lavender" />
+
+            <EditText
+                android:id="@+id/uploadAvailability"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:gravity="start|center_vertical"
+                android:hint="Enter seet availability"
+                android:padding="16dp"
+                android:textColor="@color/lavender" />
 
             <Button
+                android:id="@+id/saveButton"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Save"
-                android:id="@+id/saveButton"
-                android:textSize="18sp"
                 android:layout_marginTop="20dp"
-                app:cornerRadius = "20dp"/>
+                android:text="Save"
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
 
         </LinearLayout>
 

@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.bus_reservation.databinding.RecyclerItemBinding
 
-class MyAdapter1(private val context: Context, private val dataList: MutableList<DataClass>) :
-    RecyclerView.Adapter<MyAdapter1.MyViewHolder>() {
+    class MyAdapter2(private val context: Context, private val dataList: MutableList<DataClass>) :
+    RecyclerView.Adapter<MyAdapter2.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val binding = RecyclerItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -27,9 +27,19 @@ class MyAdapter1(private val context: Context, private val dataList: MutableList
         holder.binding.recLangTime.text = currentItem.dataLangTime
         holder.binding.recPrice.text = currentItem.dataPrice
 
+
         holder.binding.button1.setOnClickListener {
-            // Perform the action when the button is clicked
-            val intent = Intent(context, LoginActivity::class.java)
+            val intent = Intent(context, DetailActivity2::class.java).apply {
+                putExtra("Image", currentItem.dataImage)
+                putExtra("Description", currentItem.dataDesc)
+                putExtra("Title", currentItem.dataTitle)
+                putExtra("Key", currentItem.key)
+                putExtra("Language", currentItem.dataLang)
+                putExtra("DesTime", currentItem.dataDescTime)
+                putExtra("arrTime", currentItem.dataLangTime)
+                putExtra("Price", currentItem.dataPrice)
+                putExtra("availability",currentItem.dataAvilability)
+            }
             context.startActivity(intent)
         }
     }

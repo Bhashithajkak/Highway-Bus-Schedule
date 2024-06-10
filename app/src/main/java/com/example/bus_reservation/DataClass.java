@@ -16,6 +16,8 @@ public class DataClass {
 
     private  String dataAvilability;
     private String dataImage;
+
+    private String userUid;
     private String key;
 
     public String getKey() {
